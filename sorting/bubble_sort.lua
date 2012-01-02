@@ -10,9 +10,7 @@ local function bubblesort(a)
     local swapped = false
     for i = 2, table.getn(a) do
       if a[i - 1] > a[i] then
-        local tmp = a[i]
-        a[i] = a[i - 1]
-        a[i - 1] = tmp
+        a[i], a[i - 1] = a[i - 1], a[i]
         swapped = true
       end -- if
     end -- for
